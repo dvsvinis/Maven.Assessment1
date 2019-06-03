@@ -9,20 +9,22 @@ public class Dog extends Pet {
      * @param age age of this dog
      */
     public Dog(String name, Integer age) {
-
+        this.getName();
+        this.getAge();
     }
 
     /**
      * @param age age of this dog
      */
     public Dog(Integer age) {
+        this.getAge();
     }
 
     /**
      * @param name name of this dog
      */
     public Dog(String name) {
-
+        this.getName();
     }
 
     /**
@@ -32,12 +34,15 @@ public class Dog extends Pet {
      * age is 0
      */
     public Dog() {
+        this.getName();
+        this.getAge();
     }
 
     /**
      * @return bark as a string
      */
     public String speak() {
-        return null;
+
+        return "Bark";
     }
 }
