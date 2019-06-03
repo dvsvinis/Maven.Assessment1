@@ -6,6 +6,17 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        return -1;
+        Integer numJumps = 0;
+        Integer remainder = 0;
+
+        if (k / j <= k) {
+            numJumps = k / j;
+
+        }
+
+        System.out.println(numJumps);
+
+
+        return numJumps;
     }
 }
