@@ -112,6 +112,20 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        int newLength = (objectArray.length + objectArrayToAdd.length);
+        Object[] mergedArray = new Object[newLength];
+        int temp = 0;
+
+        for (int i = 0; i < objectArray.length; i++){
+            mergedArray[i] = objectArray[i];
+            temp = i;
+        }
+
+        for (int i = 0; i < objectArrayToAdd.length; i++){
+           mergedArray[temp + 1] = objectArrayToAdd[i];
+            temp++;
+       }
+
+        return mergedArray;
     }
 }
