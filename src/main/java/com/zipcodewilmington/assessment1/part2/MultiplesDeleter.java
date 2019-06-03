@@ -12,14 +12,15 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        String temp = "";
+        Integer[] odds = new Integer[ints.length];
+
         for (int i = 0; i < ints.length; i++){
-   //         if (ints[i] %2 !=0) {
-                temp += ints[i];
-   //         }
+            if (ints[i] %2 !=0) {
+                odds[i] = ints[i];
+                System.out.println(odds[i]);
+            }
         }
-        System.out.println(temp);
-        return null;
+        return odds;
     }
 
 
