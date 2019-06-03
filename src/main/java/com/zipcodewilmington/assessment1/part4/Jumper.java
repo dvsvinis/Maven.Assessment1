@@ -9,14 +9,10 @@ public class Jumper {
         Integer numJumps = 0;
         Integer remainder = 0;
 
-        if (k / j <= k) {
-            numJumps = k / j;
-
+        if (k %j <= k){
+            numJumps = k/j;
         }
-
-        System.out.println(numJumps);
-
-
+        numJumps += (k % j);
         return numJumps;
     }
 }
