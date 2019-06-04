@@ -7,14 +7,15 @@ import java.util.ArrayList;
  */
 public class PetOwner {
     String name;
-    ArrayList<Pet> pets;
+ //   ArrayList<Pet> pets;
+    ArrayList<Pet> pets = new ArrayList<Pet>();
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
         this.name = name;
- //       this.pets = pets;
+//        this.pets = getPets(pet);
 
 
     }
