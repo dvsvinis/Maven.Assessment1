@@ -32,16 +32,14 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
+        ArrayList<Integer> remaining = new ArrayList<Integer>();
 
-//        ArrayList<Object> arrayList = new ArrayList<Object>(Arrays.asList(objectArray));
-//        System.out.println(arrayList);
-//
-//        for (int i = 0; i < objectArray.length; i++){
-//            if (arrayList[i] == objectArray){
-//                arrayList.remove(i);
-//            }
-//        }
-//
+        for (int i = 0; i < objectArray.length; i++){
+            if (objectArray[i] != objectToRemove){
+                remaining.add((Integer) objectArray[i]);
+            }
+        }
+        System.out.println(("Remaining after removed value " + remaining.toString()));
        return null;
     }
 
@@ -125,7 +123,7 @@ public class ArrayUtils {
            mergedArray[temp + 1] = objectArrayToAdd[i];
             temp++;
        }
-
+        System.out.println( Arrays.toString(mergedArray) );   //??? HOW DO I GET THIS TO RETURN???
         return mergedArray;
     }
 }

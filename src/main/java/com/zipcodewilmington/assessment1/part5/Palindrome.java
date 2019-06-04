@@ -3,25 +3,32 @@ package com.zipcodewilmington.assessment1.part5;
 public class Palindrome {
 
     public Integer countPalindromes(String input){
-//        Integer count = 0;
-//        String reversed = "";
-//        int start = 0;
-//        int end = input.length()-1;
-//
-// //      while (start < input.length/2){
-//
-// //       for (start; end; )
-//            //create reverse
-//            String reverse = "";
-//            for (int i = input.length() - 1; i >= 0; i--) {
-//                reversed = reversed + input.charAt(i);
-//            }
-//            //compare
-//            if (input == reversed) {
-//                count++;
-//            }
-//
-// //       }
-        return null;
-    }
+
+        String temp = "";
+        StringBuffer stf;
+        int count = 0;
+
+            // Iterate the loop twice
+            for (int i = 0; i < input.length(); i++) {
+                for (int j = i + 1; j <= input.length(); j++) {
+                    // Get each substring
+                    temp = input.substring(i, j);
+                    System.out.println("Temp is " + temp);
+
+                    // If length is greater than or equal to two
+                    // Check for palindrome
+                    if (temp.length() >= 1) {
+                        // Use StringBuffer class to reverse the string
+                        stf = new StringBuffer(temp);
+                        stf.reverse();
+                        // Compare substring wih reverse of substring
+                        if (stf.toString().compareTo(temp) == 0)
+                            count++;
+                        System.out.println("Count is " + count);
+                    }
+                }
+            }
+
+            return count;
+        }
 }
