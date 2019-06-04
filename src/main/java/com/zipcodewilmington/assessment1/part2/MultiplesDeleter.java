@@ -41,7 +41,8 @@ public class MultiplesDeleter {
             }
         }
         Integer[] answer = new Integer[list.size()];
-        return list.toArray(answer);   }
+        return list.toArray(answer);
+ }
 
 
     /**

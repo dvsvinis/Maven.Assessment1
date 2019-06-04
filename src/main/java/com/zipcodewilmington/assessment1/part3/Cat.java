@@ -9,25 +9,22 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     public Cat(String name, Integer age) {
-        this.getName();
-        this.getAge();
+        super(name, age);
     }
 
     /**
      * @param age age of this Cat
      */
     public Cat(Integer age) {
-
-        this.getAge();
+        super("Cat name", age);
     }
 
     /**
      * @param name name of this Cat
      */
     public Cat(String name) {
-        this.getName();
-
-    }
+            super(name);
+        }
 
     /**
      * nullary constructor
@@ -36,8 +33,7 @@ public class Cat extends Pet {
      * age is 0
      */
     public Cat() {
-        this.getName();
-        this.getAge();
+        super("Cat name", 0);
     }
 
     /**

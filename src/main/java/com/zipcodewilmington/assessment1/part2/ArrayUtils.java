@@ -29,7 +29,8 @@ public class ArrayUtils {
      * @param objectArray    an array of any type of Object
      * @param objectToRemove a value to be removed from the `objectArray`
      * @return an array with identical content excluding the specified `objectToRemove`
-     * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
+     * Given an array of objects, name `objectArray`, and an object `objectToRemove`,
+     * return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
         ArrayList<Integer> remaining = new ArrayList<Integer>();
@@ -39,9 +40,9 @@ public class ArrayUtils {
                 remaining.add((Integer) objectArray[i]);
             }
         }
-        System.out.println(("Remaining after removed value " + remaining.toString()));
-       return null;
-    }
+        Integer[] answer = new Integer[remaining.size()];
+        return answer = remaining.toArray(answer);
+   }
 
 
 
@@ -111,19 +112,18 @@ public class ArrayUtils {
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
         int newLength = (objectArray.length + objectArrayToAdd.length);
-        Object[] mergedArray = new Object[newLength];
+         Integer[] mergedArray = new Integer[newLength];
         int temp = 0;
 
         for (int i = 0; i < objectArray.length; i++){
-            mergedArray[i] = objectArray[i];
+            mergedArray[i] = (Integer)objectArray[i];
             temp = i;
         }
 
         for (int i = 0; i < objectArrayToAdd.length; i++){
-           mergedArray[temp + 1] = objectArrayToAdd[i];
+           mergedArray[temp + 1] = (Integer)objectArrayToAdd[i];
             temp++;
        }
-        System.out.println( Arrays.toString(mergedArray) );   //??? HOW DO I GET THIS TO RETURN???
         return mergedArray;
     }
 }
