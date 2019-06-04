@@ -23,9 +23,7 @@ public class ArrayUtils {
         return counter;
     }
 
-
-
-    /**  NOT WORKING
+    /**
      * @param objectArray    an array of any type of Object
      * @param objectToRemove a value to be removed from the `objectArray`
      * @return an array with identical content excluding the specified `objectToRemove`
@@ -87,8 +85,6 @@ public class ArrayUtils {
         Arrays.sort(objectArray);
         Object minValue = objectArray[0];
         int minCount = objectArray.length;
-
-
             for(int i = 0; i < objectArray.length; i++) {
                 int count = 0;
                 for(int j = 0; j < objectArray.length; j++) {
@@ -103,6 +99,7 @@ public class ArrayUtils {
             }
             return minValue;
     }
+
 
     /**
      * @param objectArray      an array of any type of Object

@@ -32,8 +32,7 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        String [] words = sentence.split(" ",2);
-        String first = words[0];
+        String first = getFirstWord(sentence);
         String reverseFirst = "";
             for(int n = first.length() - 1; n >= 0; n--) {
                 reverseFirst = reverseFirst + first.charAt(n);
@@ -49,8 +48,7 @@ public class StringUtils {
     public static String reverseFirstWordThenCamelCase(String sentence) {
         String reverseWord = reverseFirstWord(sentence);
         String withUpper = reverseWord.substring(0, 1).toUpperCase();
-        String result = withUpper + reverseWord.substring(1);
-        return result;
+        return withUpper + reverseWord.substring(1);
     }
 
 
